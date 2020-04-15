@@ -1,0 +1,48 @@
+package ar.edu.unju.punto5;
+	
+	import java.io.IOException;
+	import java.util.ArrayList;
+	import java.util.StringTokenizer;
+	
+	
+	public class app_texto {
+		
+		public static void main(String[] args) throws IOException {
+			ArrayList<String> lines;
+			String path = "src/ar/edu/unju/punto5/TP02Frase.txt";
+			TextFile txtfile = new TextFile(path);
+			lines = txtfile.getLines();
+			System.out.println("La linea mas larga es: " + mayor(lines));
+			System.out.println("Su longitud es de: " + mayor(lines).length());
+	
+			System.out.println("La linea mas corta es: " + menor(lines));
+			System.out.println("Su longitud es de: " + menor(lines).length());
+		
+		}
+		
+		static string menor(ArrayList<String>strs) {
+		String menor;
+		for (String str : strs) {
+			menor=str;
+			if (menor.length()>str.length()) {
+				menor=str;
+			}
+		}
+		return menor;
+			
+		}
+		
+		static String mayor(ArrayList<String>strs) {
+		String mayor;
+		for (String str : strs) {
+			mayor=str;
+			for (mayor.length()<str.length()) {
+				mayor=str;
+			}
+			
+			
+		}
+		return mayor;
+			
+		}
+	}
